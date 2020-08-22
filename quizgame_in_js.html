@@ -1,0 +1,60 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- // REPLICATING THE QUIZGAME I MADE IN RUBY INTO JAVASRIPT -->
+<body>
+    <header> 
+      
+    </header>
+    <script>
+        class Question {
+   
+   constructor (prompt, answer){
+    this.prompt = prompt;
+    this.answer = answer;
+   }
+}
+
+
+let p1 = "What colors are apples?\n(a)red\n(b)purple\n(c)orange";
+let p2 = "What colors are bananas?\n (a)red\n(b)yellow\n(c)orange";
+let p3 = "What colors are orange?\n (a)orange\n(b)purple\n(c)green";
+
+
+question1 = new Question(p1, "a")
+question2 = new Question(p2, "b")
+question3 = new Question(p3, "a")
+
+const questions = [question1, question2, question3];
+
+
+let  run_test = (questions) => {
+
+   let answer = '';
+   let score = 0;
+
+   for (let i = 0; i < questions.length; i++) {
+        answer = prompt(questions[i].prompt, '');
+       if (answer == questions[i].answer) {
+           score++;
+       }
+   }
+
+   console.log(`You got ${score.toString()} out of ${questions.length.toString()}`)
+
+}
+
+run_test(questions);
+
+
+    </script>
+</body>
+</html>
